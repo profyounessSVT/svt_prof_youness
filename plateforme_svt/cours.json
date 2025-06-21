@@ -1,0 +1,14 @@
+{
+  "qcm": [
+    {
+      "question": "Quel est le lieu principal de la respiration cellulaire ?",
+      "choices": ["Cytoplasme", "Mitochondrie", "Noyau", "Ribosome"],
+      "answer": 1
+    },
+    {
+      "question": "Quel est le produit final de la glycolyse ?",
+      "choices": ["ATP", "Glucose", "Acide pyruvique", "CO₂"],
+      "answer": 2
+    }
+  ]
+}

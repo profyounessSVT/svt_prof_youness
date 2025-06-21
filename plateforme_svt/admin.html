@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajout QCM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <h1>Ajouter une question QCM</h1>
+  <form id="form-qcm">
+    <label>Question : <input type="text" id="question"></label><br><br>
+    <label>Choix 1 : <input type="text" id="c1"></label><br>
+    <label>Choix 2 : <input type="text" id="c2"></label><br>
+    <label>Choix 3 : <input type="text" id="c3"></label><br>
+    <label>Choix 4 : <input type="text" id="c4"></label><br>
+    <label>Bonne réponse (1-4) : <input type="number" id="correct" min="1" max="4"></label><br><br>
+    <button type="submit">Ajouter</button>
+  </form>
+  <script>
+    document.getElementById("form-qcm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const question = document.getElementById("question").value;
+      const choices = [
+        document.getElementById("c1").value,
+        document.getElementById("c2").value,
+        document.getElementById("c3").value,
+        document.getElementById("c4").value
+      ];
+      const correct = parseInt(document.getElementById("correct").value) - 1;
+      const nouvelleQuestion = {
+        question,
+        choices,
+        answer: correct
+      };
+      alert("Copiez ce code JSON dans votre fichier cours.json :\n\n" + JSON.stringify(nouvelleQuestion, null, 2));
+    });
+  </script>
+</body>
+</html>

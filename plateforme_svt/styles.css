@@ -1,0 +1,14 @@
+body {
+  font-family: sans-serif;
+  padding: 10px;
+  max-width: 700px;
+  margin: auto;
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+  button {
+    width: 100%;
+  }
+}
